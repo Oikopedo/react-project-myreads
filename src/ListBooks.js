@@ -8,7 +8,8 @@ class ListBooks extends Component{
     let res = bookIterator.next();
     const arr = [];
     while(!res.done){
-      arr.push(<Book book={this.props.books.get(res.value)} key={res.value} onUpdateBookShelf={this.props.onUpdateBookShelf}/>);
+      arr.push(<Book book={this.props.books.get(res.value)} 
+        key={res.value} onUpdateBookShelf={this.props.onUpdateBookShelf}/>);
       res=bookIterator.next();
     }
     return arr;

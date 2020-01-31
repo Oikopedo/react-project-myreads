@@ -74,7 +74,8 @@ class BooksApp extends React.Component {
     let res = shelfIterator.next();
     const arr = [];
     while(!res.done){
-      arr.push(<ListBooks shelf={res.value[1]} key={res.value[0]} books={this.state.books} onUpdateBookShelf={this.onUpdateBookShelf}/>);
+      arr.push(<ListBooks shelf={res.value[1]} key={res.value[0]} 
+        books={this.state.books} onUpdateBookShelf={this.onUpdateBookShelf}/>);
       res=shelfIterator.next();
     }
     return arr;
